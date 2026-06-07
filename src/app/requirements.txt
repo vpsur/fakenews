@@ -1,0 +1,7 @@
+gradio
+joblib
+scikit-learn==1.6.1
+scipy
+numpy
+huggingface_hub
+nltk
