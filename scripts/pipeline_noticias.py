@@ -79,10 +79,9 @@ RUN_INGEST_HF         = False
 RUN_INGEST_NEWSAPI    = False
 RUN_KAFKA_PRODUCER    = False
 RUN_INGEST_MONGO      = False
-RUN_GLUE_UPLOAD       = False   # Sube el script de Glue a S3
-RUN_GLUE_CREATE_JOB   = False   # Crea o actualiza el job en Glue
-RUN_GLUE_START_JOB    = True   # Lanza el job y espera resultado
-
+RUN_GLUE_UPLOAD       = False   # Ya creado manualmente
+RUN_GLUE_CREATE_JOB   = False   # Ya subido manualmente
+RUN_GLUE_START_JOB    = True
 
 # =============================================================================
 # SECCIÓN 2 — IMPORTS
@@ -308,6 +307,7 @@ def save_articles_to_mongo(articles: list):
 # quitar HTML y colapsar espacios.
 # ─────────────────────────────────────────────────────────────────────────────
 
+#Al final se usa glue_etl_job.py ya que tuvo que subirse de manera manual
 GLUE_JOB_SCRIPT = (
     "import sys, json, re, io\n"
     "import pandas as pd\n"
