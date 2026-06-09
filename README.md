@@ -85,7 +85,6 @@ Se generaron las siguientes visualizaciones:
 - **Curvas de aprendizaje** — todos los modelos convergen correctamente sin overfitting
 - **Curvas ROC** — AUC superior a 0.99 en todos los modelos
 - **Distribución de predicciones** — modelos muy polarizados excepto LinearSVC que mostraba mayor incertidumbre
-- **Importancia de features** — palabras más determinantes para Fake vs Real
 
 ---
 
